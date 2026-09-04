@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Principal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <button class="btn0" id="btn-inicio"><h1> RiotShop</h1></button>
+        </div>
+        <nav class="nav-buttons">
+            <button class="btn" id="btn-explorar">Explorar</button>
+            <button class="btn" id="btn-about">Acerca de</button>
+            <button class="btn" id="btn-lista">Lista de Productos</button>
+        </nav>
+    </header>
+
+    <div class="carousel-wrapper-container">
+        <div class="carousel-container">
+            <h2>Productos Destacados</h2>
+            
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev-btn" id="prevBtn">&#10094;</button>
+
+                <div class="carousel-track" id="carouselTrack">
+
+                    <div class="product-card">
+
+                    <img src="https://via.placeholder.com/250x180" alt="Producto 1">
+
+                        <div class="product-info">
+
+                            <h3>ABC</h3>
+
+                            <p class="price">$59.99</p>
+
+                            <button class="buy-btn">Ver Detalles</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+
+                    <img src="https://via.placeholder.com/250x180" alt="Producto 2">
+
+                        <div class="product-info">
+
+                            <h3>NEED</h3>
+
+                            <p class="price">$59.99</p>
+
+                            <button class="buy-btn">Ver Detalles</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+
+                    <img src="https://via.placeholder.com/250x180" alt="Producto 3">
+
+                        <div class="product-info">
+
+                            <h3>WALK</h3>
+
+                            <p class="price">$59.99</p>
+
+                            <button class="buy-btn">Ver Detalles</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+
+                    <img src="https://via.placeholder.com/250x180" alt="Producto 4">
+
+                        <div class="product-info">
+
+                            <h3>WISH</h3>
+
+                            <p class="price">$59.99</p>
+
+                            <button class="buy-btn">Ver Detalles</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn next-btn" id="nextBtn">&#10095;</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyCWvXeCWCuQZQ1yEroVJcvQZkOdEJipmTA",
+            authDomain: "riotshopbol.firebaseapp.com",
+            projectId: "riotshopbol",
+            storageBucket: "riotshopbol.firebasestorage.app",
+            messagingSenderId: "291537890088",
+            appId: "1:291537890088:web:d85416c3aa800c6d7ffe1d",
+            measurementId: "G-ENHCY7PZ7R"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+</body>
+</html>

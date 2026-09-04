@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+/* --- ESTILOS GLOBALES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+}
+
+/* --- ESTILO DEL HEADER --- */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.logo h2 {
+    color: #333;
+    font-weight: 600;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* --- BOTONES GENERALES --- */
+.btn, .btn0 {
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn {
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.btn:hover {
+    background-color: #e4e6eb;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn0 {
+    background-color: transparent;
+    color: #333;
+}
+
+.btn0:hover {
+    background-color: #f0f2f5;
+}
+
+/* --- ESTILOS DEL CARRUSEL --- */
+.carousel-wrapper-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 40px 20px;
+    margin: 0 auto;
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 1000px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.carousel-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+}
+
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    padding: 40px 0;
+    align-items: center;
+    width: 100%;
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none; /* Chrome, Safari y Opera */
+}
+
+/* --- TARJETA DE PRODUCTO --- */
+.product-card {
+    flex: 0 0 calc((100% - 40px) / 3);
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    opacity: 0.7;
+    transform: scale(0.9);
+    filter: grayscale(20%);
+}
+
+.product-card.in-focus {
+    opacity: 1;
+    transform: scale(1.05);
+    filter: grayscale(0%);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+    border-color: #007bff;
+    z-index: 1;
+}
+
+/* Ajuste del texto para destacar el producto central de forma fluida */
+.product-card.in-focus .product-info h3 {
+    font-weight: 700;
+    color: #111;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    transition: height 0.5s ease;
+}
+
+.product-card.in-focus img {
+    height: 180px;
+}
+
+.product-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.product-info h3 {
+    font-size: 16px;
+    color: #333;
+}
+
+.price {
+    font-size: 15px;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.buy-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.buy-btn:hover {
+    background-color: #0056b3;
+}
+
+/* --- BOTONES DE NAVEGACIÓN DEL CARRUSEL --- */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    color: #333;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    transition: background 0.2s, transform 0.2s;
+}
+
+.carousel-btn:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: -20px;
+}
+
+.next-btn {
+    right: -20px;
+}
